@@ -1,4 +1,4 @@
-package com.example.quranstrf;
+package com.confidence.quranstrf;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

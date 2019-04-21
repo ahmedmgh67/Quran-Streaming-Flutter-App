@@ -14,6 +14,7 @@ class SplashPage extends StatelessWidget {
       title: Text("Quran Player", style:TextStyle(color: Colors.white)),
       seconds:3,
       navigateAfterSeconds: MainPage(),
+      image: Image.asset("assets/logo.jpg"),
     );
   }
 }
@@ -57,7 +58,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.greenAccent[200],
         title: Text("Quran Reader"),
       ),
       body: !isLoading ? Center(child: CircularProgressIndicator()): ListView.builder(
@@ -71,7 +72,8 @@ class _MainPageState extends State<MainPage> {
             ),
             child: ListTile(
               title: Text(list[i]["Sora"], textAlign: TextAlign.end,),
-              onTap: () => load(i)
+              onTap: () => load(i),
+              leading: Icon(Icons.play_circle_outline),
             ),
           );
         },
